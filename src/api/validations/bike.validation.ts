@@ -7,9 +7,10 @@ const bikeValidation = (method: string) => {
         case "add": {
             return [
                 body("name", "userName doesn't exists").exists(),
-                body("email", "Invalid email").exists().isEmail(),
-                body("phone").optional().isInt(),
-                body("status").optional().isIn(["enabled", "disabled"])
+                body("purchaseDate", "purchaseDate doesn't exists").exists(),
+                // body("email", "Invalid email").exists().isEmail(),
+                // body("phone").optional().isInt(),
+                // body("status").optional().isIn(["enabled", "disabled"])
             ];
         }
     }
